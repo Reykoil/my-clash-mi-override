@@ -1,3 +1,109 @@
+# ══ 出站锚点 ══
+Anchor_ALL: &Anchor_ALL {type: select, proxies: [DIRECT, ALL_UT, NO_HK, NO_JP, HK_UT, TW_UT, JP_UT, SG_UT, KR_UT, US_UT, EU_UT, OT_UT]}
+# ══ 策略锚点 ══
+Anchor_HS: &Anchor_HS {type: select, empty-fallback: REJECT, include-all: true}
+Anchor_FB: &Anchor_FB {type: fallback, empty-fallback: REJECT, interval: 300, lazy: false, timeout: 3000, max-failed-times: 2, hidden: true, url: 'https://www.gstatic.com/generate_204'}
+Anchor_UT: &Anchor_UT {type: url-test, empty-fallback: REJECT, interval: 300, lazy: false, timeout: 3000, max-failed-times: 2, hidden: true, url: 'https://www.gstatic.com/generate_204', tolerance: 50, include-all: true}
+# ══ 规则锚点 ══
+Anchor_DN: &Anchor_DN {type: http, interval: 86400, behavior: domain, format: mrs}
+Anchor_IP: &Anchor_IP {type: http, interval: 86400, behavior: ipcidr, format: mrs}
+Anchor_CL: &Anchor_CL {type: http, interval: 86400, behavior: classical, format: yaml}
+# ══ 区域锚点 ══
+Anchor_HK: &Anchor_HK '(?i)^(?=.*(香港|(?<![a-zA-Z])(hk|hkg)(?![a-zA-Z])|hongkong|hong kong|🇭🇰)).*$'
+Anchor_TW: &Anchor_TW '(?i)^(?=.*(台湾|(?<![a-zA-Z])(tw|tpe|khh|tsa)(?![a-zA-Z])|taiwan|taipei|🇹🇼)).*$'
+Anchor_JP: &Anchor_JP '(?i)^(?=.*(日本|(?<![a-zA-Z])(jp|nrt|hnd|kix|cts|fuk)(?![a-zA-Z])|japan|tokyo|🇯🇵)).*$'
+Anchor_SG: &Anchor_SG '(?i)^(?=.*(新加坡|(?<![a-zA-Z])(sg|sin|xsp)(?![a-zA-Z])|singapore|🇸🇬)).*$'
+Anchor_KR: &Anchor_KR '(?i)^(?=.*(韩国|(?<![a-zA-Z])(kr|icn|gmp|pus)(?![a-zA-Z])|korea|seoul|🇰🇷)).*$'
+Anchor_US: &Anchor_US '(?i)^(?=.*(美国|(?<![a-zA-Z])(us|usa|lax|sfo|jfk|sjc)(?![a-zA-Z])|america|united states|🇺🇸)).*$'
+Anchor_EU: &Anchor_EU '(?i)^(?=.*(奥地利|奥地利共和国|比利时|保加利亚|克罗地亚|塞浦路斯|捷克|丹麦|爱沙尼亚|芬兰|法国|德国|希腊|匈牙利|爱尔兰|意大利|拉脱维亚|立陶宛|卢森堡|荷兰|波兰|葡萄牙|罗马尼亚|斯洛伐克|斯洛文尼亚|西班牙|瑞典|英国|🇧🇪|🇨🇿|🇩🇰|🇫🇮|🇫🇷|🇩🇪|🇮🇪|🇮🇹|🇱🇹|🇱🇺|🇳🇱|🇵🇱|🇸🇪|🇬🇧|CDG|FRA|AMS|MAD|BCN|FCO|MUC|BRU)).*$'
+Anchor_OT: &Anchor_OT '^(?!.*(DIRECT|香港|台湾|日本|新加坡|韩国|美国|奥地利|奥地利共和国|比利时|保加利亚|克罗地亚|塞浦路斯|捷克|丹麦|爱沙尼亚|芬兰|法国|德国|希腊|匈牙利|爱尔兰|意大利|拉脱维亚|立陶宛|卢森堡|荷兰|波兰|葡萄牙|罗马尼亚|斯洛伐克|斯洛文尼亚|西班牙|瑞典|英国|🇭🇰|🇹🇼|🇸🇬|🇯🇵|🇰🇷|🇺🇸|🇬🇧|HK|TW|SG|JP|KR|US|GB|CDG|FRA|AMS|MAD|BCN|FCO|MUC|BRU|HKG|TPE|TSA|KHH|SIN|XSP|NRT|HND|KIX|CTS|FUK|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD|LHR|LGW)).*$'
+Anchor_NOHK: &Anchor_NOHK '^(?!.*(香港|(?<![a-zA-Z])(hk|hkg)(?![a-zA-Z])|hongkong|hong kong|🇭🇰)).*$'
+Anchor_NOJP: &Anchor_NOJP '^(?!.*(日本|(?<![a-zA-Z])(jp|nrt|hnd|kix|cts|fuk)(?![a-zA-Z])|japan|tokyo|🇯🇵)).*$'
+
+
+proxy-groups:
+  - name: Final
+    <<: *Anchor_ALL
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Food-Delivery/Food_Pack.png
+
+  - name: Google
+    type: select
+    proxies:
+      - Final
+      - NO_HK
+    icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Google.png
+
+  - name: Bahamut
+    type: select
+    proxies:
+      - DIRECT
+      - Final
+      - HK_UT
+      - TW_UT
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bahamut.png
+
+  - name: Apple
+    type: select
+    proxies:
+      - DIRECT
+      - Final
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_2.png
+
+  - name: ALL_UT
+    <<: *Anchor_UT
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Food-Delivery/Food_Pack.png
+
+  - name: NO_HK
+    <<: *Anchor_UT
+    filter: *Anchor_NOHK
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Food-Delivery/Food_Pack.png
+
+  - name: NO_JP
+    <<: *Anchor_UT
+    filter: *Anchor_NOJP
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Food-Delivery/Food_Pack.png
+
+  - name: HK_UT
+    <<: *Anchor_UT
+    filter: *Anchor_HK
+    icon: https://github.com/Seven1echo/Yaml/raw/main/icons/HK.png
+
+  - name: TW_UT
+    <<: *Anchor_UT
+    filter: *Anchor_TW
+    icon: https://github.com/Seven1echo/Yaml/raw/main/icons/TW.png
+
+  - name: JP_UT
+    <<: *Anchor_UT
+    filter: *Anchor_JP
+    icon: https://github.com/Seven1echo/Yaml/raw/main/icons/JP.png
+
+  - name: SG_UT
+    <<: *Anchor_UT
+    filter: *Anchor_SG
+    icon: https://github.com/Seven1echo/Yaml/raw/main/icons/SG.png
+
+  - name: KR_UT
+    <<: *Anchor_UT
+    filter: *Anchor_KR
+    icon: https://github.com/Seven1echo/Yaml/raw/main/icons/KR.png
+
+  - name: US_UT
+    <<: *Anchor_UT
+    filter: *Anchor_US
+    icon: https://github.com/Seven1echo/Yaml/raw/main/icons/US.png
+
+  - name: EU_UT
+    <<: *Anchor_UT
+    filter: *Anchor_EU
+    icon: https://github.com/Seven1echo/Yaml/raw/main/icons/EU.png
+
+  - name: OT_UT
+    <<: *Anchor_UT
+    filter: *Anchor_OT
+    icon: https://github.com/Seven1echo/Yaml/raw/main/icons/OT.png
+
+
 rule-providers:
     Apple-IP:
         behavior: ipcidr
@@ -199,38 +305,43 @@ rule-providers:
         proxy: DIRECT
         type: http
         url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/TikTok/TikTok-Site.mrs
+
+
+
 rules:
     - AND,((DST-PORT,443),(NETWORK,UDP)),REJECT
     - DOMAIN,ntp.aliyun.com,DIRECT
     - DOMAIN,proxy.sakuraikaede.com,DIRECT
     - DOMAIN,converter-mitce.sakuraikaede.com,DIRECT
     - DOMAIN-KEYWORD,trakt.tv,DIRECT
-    - DOMAIN-KEYWORD,msftconnecttest.com,主代理
-    - DOMAIN-KEYWORD,msftncsi.com,主代理
+    - DOMAIN-KEYWORD,tmdb.org,DIRECT
+    - DOMAIN-KEYWORD,msftconnecttest.com,Final
+    - DOMAIN-KEYWORD,msftncsi.com,Final
     - DOMAIN-KEYWORD,googleapis,Google
-    - RULE-SET,Bahamut-Site,Bahamut
-    - RULE-SET,Bilibili-Site,Bilibili
-    - RULE-SET,Discord-Site,Discord
-    - RULE-SET,GoogleFCM-Site,GoogleFCM
-    - RULE-SET,Netflix-Site,Netflix
-    - RULE-SET,OpenAI-Site,OpenAI
-    - RULE-SET,Speedtest-Site,Speedtest
-    - RULE-SET,Spotify-Site,Spotify
-    - RULE-SET,Steam-Site,Steam
-    - RULE-SET,Telegram-Site,Telegram
-    - RULE-SET,TikTok-Site,TikTok
+
     - RULE-SET,Apple-Site,Apple
-    - RULE-SET,Google-Site,Google
-    - RULE-SET,Microsoft-Site,Microsoft
-    - RULE-SET,GFWList-Site,黑名单网站
-    - RULE-SET,China-Site,中国大陆网站
-    - RULE-SET,Local-IP,DIRECT,no-resolve
-    - RULE-SET,Bilibili-IP,Bilibili
-    - RULE-SET,Netflix-IP,Netflix
-    - RULE-SET,OpenAI-IP,OpenAI
-    - RULE-SET,Spotify-IP,Spotify
-    - RULE-SET,Telegram-IP,Telegram
     - RULE-SET,Apple-IP,Apple
+    - RULE-SET,Bahamut-Site,Bahamut
+    - RULE-SET,GoogleFCM-Site,Google
+    - RULE-SET,Google-Site,Google
     - RULE-SET,Google-IP,Google
-    - RULE-SET,China-IP,中国大陆网站
+    - RULE-SET,OpenAI-Site,Google
+    - RULE-SET,OpenAI-IP,Google
+    - RULE-SET,Netflix-Site,Final
+    - RULE-SET,Netflix-IP,Final
+    - RULE-SET,Spotify-Site,Final
+    - RULE-SET,Spotify-IP,Final
+    - RULE-SET,Telegram-Site,Final
+    - RULE-SET,Telegram-IP,Final
+    - RULE-SET,Discord-Site,Final
+    - RULE-SET,TikTok-Site,Final
+    - RULE-SET,GFWList-Site,Final
+    - RULE-SET,Steam-Site,DIRECT
+    - RULE-SET,Speedtest-Site,DIRECT
+    - RULE-SET,Microsoft-Site,DIRECT
+    - RULE-SET,Bilibili-Site,DIRECT
+    - RULE-SET,Bilibili-IP,DIRECT
+    - RULE-SET,China-Site,DIRECT
+    - RULE-SET,China-IP,DIRECT
+    - RULE-SET,Local-IP,DIRECT,no-resolve
     - MATCH,主代理
