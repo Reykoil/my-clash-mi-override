@@ -313,6 +313,7 @@ rules:
     - DOMAIN,ntp.aliyun.com,DIRECT
     - DOMAIN,proxy.sakuraikaede.com,DIRECT
     - DOMAIN,converter-mitce.sakuraikaede.com,DIRECT
+    - DOMAIN-KEYWORD,plex.tv,DIRECT
     - DOMAIN-KEYWORD,trakt.tv,DIRECT
     - DOMAIN-KEYWORD,tmdb.org,DIRECT
     - DOMAIN-KEYWORD,api.day.app,DIRECT
