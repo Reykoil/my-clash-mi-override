@@ -344,4 +344,4 @@ rules:
     - RULE-SET,China-Site,DIRECT
     - RULE-SET,China-IP,DIRECT
     - RULE-SET,Local-IP,DIRECT,no-resolve
-    - MATCH,主代理
+    - MATCH,Final
