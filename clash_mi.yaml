@@ -1,5 +1,5 @@
 # ══ 出站锚点 ══
-Anchor_ALL: &Anchor_ALL {type: select, proxies: [DIRECT, ALL, NO_HK, NO_JP, HK, TW, JP, SG, KR, US, EU, OT]}
+Anchor_ALL: &Anchor_ALL {type: select, proxies: [ALL, NO_HK, NO_JP, HK, TW, JP, SG, KR, US, EU, OT, DIRECT]}
 # ══ 策略锚点 ══
 Anchor_HS: &Anchor_HS {type: select, empty-fallback: REJECT, include-all: true}
 Anchor_FB: &Anchor_FB {type: fallback, empty-fallback: REJECT, interval: 300, lazy: false, timeout: 3000, max-failed-times: 2, hidden: true, url: 'https://www.gstatic.com/generate_204'}
@@ -36,10 +36,10 @@ proxy-groups:
   - name: Bahamut
     type: select
     proxies:
-      - DIRECT
       - Final
       - HK
       - TW
+      - DIRECT
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bahamut.png
 
   - name: Apple
