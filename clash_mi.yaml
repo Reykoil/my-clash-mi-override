@@ -315,6 +315,7 @@ rules:
     - DOMAIN,converter-mitce.sakuraikaede.com,DIRECT
     - DOMAIN-KEYWORD,trakt.tv,DIRECT
     - DOMAIN-KEYWORD,tmdb.org,DIRECT
+    - DOMAIN-KEYWORD,api.day.app,DIRECT
     - DOMAIN-KEYWORD,msftconnecttest.com,Final
     - DOMAIN-KEYWORD,msftncsi.com,Final
     - DOMAIN-KEYWORD,googleapis,Google
