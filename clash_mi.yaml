@@ -1,5 +1,5 @@
 # ══ 出站锚点 ══
-Anchor_ALL: &Anchor_ALL {type: select, proxies: [DIRECT, ALL_UT, NO_HK, NO_JP, HK_UT, TW_UT, JP_UT, SG_UT, KR_UT, US_UT, EU_UT, OT_UT]}
+Anchor_ALL: &Anchor_ALL {type: select, proxies: [DIRECT, ALL, NO_HK, NO_JP, HK, TW, JP, SG, KR, US, EU, OT]}
 # ══ 策略锚点 ══
 Anchor_HS: &Anchor_HS {type: select, empty-fallback: REJECT, include-all: true}
 Anchor_FB: &Anchor_FB {type: fallback, empty-fallback: REJECT, interval: 300, lazy: false, timeout: 3000, max-failed-times: 2, hidden: true, url: 'https://www.gstatic.com/generate_204'}
@@ -38,8 +38,8 @@ proxy-groups:
     proxies:
       - DIRECT
       - Final
-      - HK_UT
-      - TW_UT
+      - HK
+      - TW
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bahamut.png
 
   - name: Apple
@@ -49,7 +49,7 @@ proxy-groups:
       - Final
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_2.png
 
-  - name: ALL_UT
+  - name: ALL
     <<: *Anchor_UT
     icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Food-Delivery/Food_Pack.png
 
@@ -63,42 +63,42 @@ proxy-groups:
     filter: *Anchor_NOJP
     icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Food-Delivery/Food_Pack.png
 
-  - name: HK_UT
+  - name: HK
     <<: *Anchor_UT
     filter: *Anchor_HK
     icon: https://github.com/Seven1echo/Yaml/raw/main/icons/HK.png
 
-  - name: TW_UT
+  - name: TW
     <<: *Anchor_UT
     filter: *Anchor_TW
     icon: https://github.com/Seven1echo/Yaml/raw/main/icons/TW.png
 
-  - name: JP_UT
+  - name: JP
     <<: *Anchor_UT
     filter: *Anchor_JP
     icon: https://github.com/Seven1echo/Yaml/raw/main/icons/JP.png
 
-  - name: SG_UT
+  - name: SG
     <<: *Anchor_UT
     filter: *Anchor_SG
     icon: https://github.com/Seven1echo/Yaml/raw/main/icons/SG.png
 
-  - name: KR_UT
+  - name: KR
     <<: *Anchor_UT
     filter: *Anchor_KR
     icon: https://github.com/Seven1echo/Yaml/raw/main/icons/KR.png
 
-  - name: US_UT
+  - name: US
     <<: *Anchor_UT
     filter: *Anchor_US
     icon: https://github.com/Seven1echo/Yaml/raw/main/icons/US.png
 
-  - name: EU_UT
+  - name: EU
     <<: *Anchor_UT
     filter: *Anchor_EU
     icon: https://github.com/Seven1echo/Yaml/raw/main/icons/EU.png
 
-  - name: OT_UT
+  - name: OT
     <<: *Anchor_UT
     filter: *Anchor_OT
     icon: https://github.com/Seven1echo/Yaml/raw/main/icons/OT.png
