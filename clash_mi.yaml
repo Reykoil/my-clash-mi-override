@@ -30,16 +30,6 @@ proxy-groups:
       - Final
     icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png
 
-  - name: Bahamut
-    type: select
-    proxies:
-      - HK_TW_FB
-      - Final
-      - HK
-      - TW
-      - DIRECT
-    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Bahamut.png
-
   - name: Google
     <<: *Anchor_FB
     proxies:
@@ -51,6 +41,20 @@ proxy-groups:
     <<: *Anchor_ALL
     icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Final.png
 
+  - name: Bahamut
+    type: select
+    proxies:
+      - HK_TW_FB
+      - Final
+      - HK
+      - TW
+      - DIRECT
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Bahamut.png
+
+  - name: ALL
+    <<: *Anchor_UT
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Food-Delivery/Food_Pack.png
+
   - name: HK_TW_FB
     <<: *Anchor_FB
     proxies:
@@ -58,23 +62,19 @@ proxy-groups:
       - Final
     icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Food-Delivery/Food_Pack.png
 
-  - name: ALL
-    <<: *Anchor_UT
-    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Food-Delivery/Food_Pack.png
-
   - name: NO_HK
     <<: *Anchor_UT
     filter: *Anchor_NOHK
     icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Food-Delivery/Food_Pack.png
 
-  - name: NO_JP
-    <<: *Anchor_UT
-    filter: *Anchor_NOJP
-    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Food-Delivery/Food_Pack.png
-
   - name: HK_TW
     <<: *Anchor_UT
     filter: *Anchor_HKTW
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Food-Delivery/Food_Pack.png
+
+  - name: NO_JP
+    <<: *Anchor_UT
+    filter: *Anchor_NOJP
     icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Food-Delivery/Food_Pack.png
 
   - name: HK
