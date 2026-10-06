@@ -356,7 +356,7 @@ rule-providers:
     path: ./rules/ProgramAD.yaml
     interval: 86400
 
-  reject:
+  RejectList:
     type: http
     behavior: domain
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
@@ -381,7 +381,7 @@ rules:
     - RULE-SET,EasyListChina,REJECT
     - RULE-SET,EasyPrivacy,REJECT
     - RULE-SET,ProgramAD,REJECT
-    - RULE-SET,reject,REJECT
+    - RULE-SET,RejectList,REJECT
 
     - RULE-SET,Apple-Site,Apple
     - RULE-SET,Apple-IP,Apple
