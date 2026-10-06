@@ -119,243 +119,249 @@ proxy-groups:
 
 
 rule-providers:
-    Apple-IP:
-        behavior: ipcidr
-        format: mrs
-        interval: 86400
-        path: ./ruleset/Apple-IP.mrs
-        proxy: DIRECT
-        type: http
-        url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/Apple/Apple-IP.mrs
-    Apple-Site:
-        behavior: domain
-        format: mrs
-        interval: 86400
-        path: ./ruleset/Apple-Site.mrs
-        proxy: DIRECT
-        type: http
-        url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/Apple/Apple-Site.mrs
-    Bahamut-Site:
-        behavior: domain
-        format: mrs
-        interval: 86400
-        path: ./ruleset/Bahamut-Site.mrs
-        proxy: DIRECT
-        type: http
-        url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/Bahamut/Bahamut-Site.mrs
-    Bilibili-IP:
-        behavior: ipcidr
-        format: mrs
-        interval: 86400
-        path: ./ruleset/Bilibili-IP.mrs
-        proxy: DIRECT
-        type: http
-        url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/Bilibili/Bilibili-IP.mrs
-    Bilibili-Site:
-        behavior: domain
-        format: mrs
-        interval: 86400
-        path: ./ruleset/Bilibili-Site.mrs
-        proxy: DIRECT
-        type: http
-        url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/Bilibili/Bilibili-Site.mrs
-    China-IP:
-        behavior: ipcidr
-        format: mrs
-        interval: 86400
-        path: ./ruleset/China-IP.mrs
-        proxy: DIRECT
-        type: http
-        url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/China/China-IP.mrs
-    China-Site:
-        behavior: domain
-        format: mrs
-        interval: 86400
-        path: ./ruleset/China-Site.mrs
-        proxy: DIRECT
-        type: http
-        url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/China/China-Site.mrs
-    Discord-Site:
-        behavior: domain
-        format: mrs
-        interval: 86400
-        path: ./ruleset/Discord-Site.mrs
-        proxy: DIRECT
-        type: http
-        url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/Discord/Discord-Site.mrs
-    GFWList-Site:
-        behavior: domain
-        format: mrs
-        interval: 86400
-        path: ./ruleset/GFWList-Site.mrs
-        proxy: DIRECT
-        type: http
-        url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/GFWList/GFWList-Site.mrs
-    Google-IP:
-        behavior: ipcidr
-        format: mrs
-        interval: 86400
-        path: ./ruleset/Google-IP.mrs
-        proxy: DIRECT
-        type: http
-        url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/Google/Google-IP.mrs
-    Google-Site:
-        behavior: domain
-        format: mrs
-        interval: 86400
-        path: ./ruleset/Google-Site.mrs
-        proxy: DIRECT
-        type: http
-        url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/Google/Google-Site.mrs
-    GoogleFCM-Site:
-        behavior: domain
-        format: mrs
-        interval: 86400
-        path: ./ruleset/GoogleFCM-Site.mrs
-        proxy: DIRECT
-        type: http
-        url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/GoogleFCM/GoogleFCM-Site.mrs
-    Local-IP:
-        behavior: ipcidr
-        format: mrs
-        interval: 86400
-        path: ./ruleset/Local-IP.mrs
-        proxy: DIRECT
-        type: http
-        url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/Local/Local-IP.mrs
-    Microsoft-Site:
-        behavior: domain
-        format: mrs
-        interval: 86400
-        path: ./ruleset/Microsoft-Site.mrs
-        proxy: DIRECT
-        type: http
-        url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/Microsoft/Microsoft-Site.mrs
-    Netflix-IP:
-        behavior: ipcidr
-        format: mrs
-        interval: 86400
-        path: ./ruleset/Netflix-IP.mrs
-        proxy: DIRECT
-        type: http
-        url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/Netflix/Netflix-IP.mrs
-    Netflix-Site:
-        behavior: domain
-        format: mrs
-        interval: 86400
-        path: ./ruleset/Netflix-Site.mrs
-        proxy: DIRECT
-        type: http
-        url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/Netflix/Netflix-Site.mrs
-    OpenAI-IP:
-        behavior: ipcidr
-        format: mrs
-        interval: 86400
-        path: ./ruleset/OpenAI-IP.mrs
-        proxy: DIRECT
-        type: http
-        url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/OpenAI/OpenAI-IP.mrs
-    OpenAI-Site:
-        behavior: domain
-        format: mrs
-        interval: 86400
-        path: ./ruleset/OpenAI-Site.mrs
-        proxy: DIRECT
-        type: http
-        url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/OpenAI/OpenAI-Site.mrs
-    Speedtest-Site:
-        behavior: domain
-        format: mrs
-        interval: 86400
-        path: ./ruleset/Speedtest-Site.mrs
-        proxy: DIRECT
-        type: http
-        url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/Speedtest/Speedtest-Site.mrs
-    Spotify-IP:
-        behavior: ipcidr
-        format: mrs
-        interval: 86400
-        path: ./ruleset/Spotify-IP.mrs
-        proxy: DIRECT
-        type: http
-        url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/Spotify/Spotify-IP.mrs
-    Spotify-Site:
-        behavior: domain
-        format: mrs
-        interval: 86400
-        path: ./ruleset/Spotify-Site.mrs
-        proxy: DIRECT
-        type: http
-        url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/Spotify/Spotify-Site.mrs
-    Steam-Site:
-        behavior: domain
-        format: mrs
-        interval: 86400
-        path: ./ruleset/Steam-Site.mrs
-        proxy: DIRECT
-        type: http
-        url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/Steam/Steam-Site.mrs
-    Telegram-IP:
-        behavior: ipcidr
-        format: mrs
-        interval: 86400
-        path: ./ruleset/Telegram-IP.mrs
-        proxy: DIRECT
-        type: http
-        url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/Telegram/Telegram-IP.mrs
-    Telegram-Site:
-        behavior: domain
-        format: mrs
-        interval: 86400
-        path: ./ruleset/Telegram-Site.mrs
-        proxy: DIRECT
-        type: http
-        url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/Telegram/Telegram-Site.mrs
-    TikTok-Site:
-        behavior: domain
-        format: mrs
-        interval: 86400
-        path: ./ruleset/TikTok-Site.mrs
-        proxy: DIRECT
-        type: http
-        url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/TikTok/TikTok-Site.mrs
+  Apple-IP:
+    behavior: ipcidr
+    format: mrs
+    interval: 86400
+    path: ./ruleset/Apple-IP.mrs
+    proxy: DIRECT
+    type: http
+    url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/Apple/Apple-IP.mrs
+  Apple-Site:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    path: ./ruleset/Apple-Site.mrs
+    proxy: DIRECT
+    type: http
+    url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/Apple/Apple-Site.mrs
+  Bahamut-Site:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    path: ./ruleset/Bahamut-Site.mrs
+    proxy: DIRECT
+    type: http
+    url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/Bahamut/Bahamut-Site.mrs
+  Bilibili-IP:
+    behavior: ipcidr
+    format: mrs
+    interval: 86400
+    path: ./ruleset/Bilibili-IP.mrs
+    proxy: DIRECT
+    type: http
+    url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/Bilibili/Bilibili-IP.mrs
+  Bilibili-Site:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    path: ./ruleset/Bilibili-Site.mrs
+    proxy: DIRECT
+    type: http
+    url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/Bilibili/Bilibili-Site.mrs
+  China-IP:
+    behavior: ipcidr
+    format: mrs
+    interval: 86400
+    path: ./ruleset/China-IP.mrs
+    proxy: DIRECT
+    type: http
+    url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/China/China-IP.mrs
+  China-Site:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    path: ./ruleset/China-Site.mrs
+    proxy: DIRECT
+    type: http
+    url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/China/China-Site.mrs
+  Discord-Site:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    path: ./ruleset/Discord-Site.mrs
+    proxy: DIRECT
+    type: http
+    url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/Discord/Discord-Site.mrs
+  GFWList-Site:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    path: ./ruleset/GFWList-Site.mrs
+    proxy: DIRECT
+    type: http
+    url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/GFWList/GFWList-Site.mrs
+  Google-IP:
+    behavior: ipcidr
+    format: mrs
+    interval: 86400
+    path: ./ruleset/Google-IP.mrs
+    proxy: DIRECT
+    type: http
+    url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/Google/Google-IP.mrs
+  Google-Site:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    path: ./ruleset/Google-Site.mrs
+    proxy: DIRECT
+    type: http
+    url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/Google/Google-Site.mrs
+  GoogleFCM-Site:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    path: ./ruleset/GoogleFCM-Site.mrs
+    proxy: DIRECT
+    type: http
+    url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/GoogleFCM/GoogleFCM-Site.mrs
+  Local-IP:
+    behavior: ipcidr
+    format: mrs
+    interval: 86400
+    path: ./ruleset/Local-IP.mrs
+    proxy: DIRECT
+    type: http
+    url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/Local/Local-IP.mrs
+  Microsoft-Site:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    path: ./ruleset/Microsoft-Site.mrs
+    proxy: DIRECT
+    type: http
+    url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/Microsoft/Microsoft-Site.mrs
+  Netflix-IP:
+    behavior: ipcidr
+    format: mrs
+    interval: 86400
+    path: ./ruleset/Netflix-IP.mrs
+    proxy: DIRECT
+    type: http
+    url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/Netflix/Netflix-IP.mrs
+  Netflix-Site:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    path: ./ruleset/Netflix-Site.mrs
+    proxy: DIRECT
+    type: http
+    url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/Netflix/Netflix-Site.mrs
+  OpenAI-IP:
+    behavior: ipcidr
+    format: mrs
+    interval: 86400
+    path: ./ruleset/OpenAI-IP.mrs
+    proxy: DIRECT
+    type: http
+    url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/OpenAI/OpenAI-IP.mrs
+  OpenAI-Site:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    path: ./ruleset/OpenAI-Site.mrs
+    proxy: DIRECT
+    type: http
+    url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/OpenAI/OpenAI-Site.mrs
+  Speedtest-Site:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    path: ./ruleset/Speedtest-Site.mrs
+    proxy: DIRECT
+    type: http
+    url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/Speedtest/Speedtest-Site.mrs
+  Spotify-IP:
+    behavior: ipcidr
+    format: mrs
+    interval: 86400
+    path: ./ruleset/Spotify-IP.mrs
+    proxy: DIRECT
+    type: http
+    url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/Spotify/Spotify-IP.mrs
+  Spotify-Site:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    path: ./ruleset/Spotify-Site.mrs
+    proxy: DIRECT
+    type: http
+    url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/Spotify/Spotify-Site.mrs
+  Steam-Site:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    path: ./ruleset/Steam-Site.mrs
+    proxy: DIRECT
+    type: http
+    url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/Steam/Steam-Site.mrs
+  Telegram-IP:
+    behavior: ipcidr
+    format: mrs
+    interval: 86400
+    path: ./ruleset/Telegram-IP.mrs
+    proxy: DIRECT
+    type: http
+    url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/Telegram/Telegram-IP.mrs
+  Telegram-Site:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    path: ./ruleset/Telegram-Site.mrs
+    proxy: DIRECT
+    type: http
+    url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/Telegram/Telegram-Site.mrs
+  TikTok-Site:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    path: ./ruleset/TikTok-Site.mrs
+    proxy: DIRECT
+    type: http
+    url: https://cdn.jsdmirror.com/gh/HosheaPDNX/rule-set@V2.0.0/mihomo/TikTok/TikTok-Site.mrs
 
 
-    AD:
-      type: http
-      behavior: domain
-      url: "https://raw.githubusercontent.com/earoftoast/clash-rules/main/AD.yaml"
-      path: ./rules/AD.yaml
-      interval: 86400
-      
-    EasyList:
-      type: http
-      behavior: domain
-      url: "https://raw.githubusercontent.com/earoftoast/clash-rules/main/EasyList.yaml"
-      path: ./rules/EasyList.yaml
-      interval: 86400
-      
-    EasyListChina:
-      type: http
-      behavior: domain
-      url: "https://raw.githubusercontent.com/earoftoast/clash-rules/main/EasyListChina.yaml"
-      path: ./rules/EasyListChina.yaml
-      interval: 86400
+  AD:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/earoftoast/clash-rules/main/AD.yaml"
+    path: ./rules/AD.yaml
+    interval: 86400
+    
+  EasyList:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/earoftoast/clash-rules/main/EasyList.yaml"
+    path: ./rules/EasyList.yaml
+    interval: 86400
+    
+  EasyListChina:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/earoftoast/clash-rules/main/EasyListChina.yaml"
+    path: ./rules/EasyListChina.yaml
+    interval: 86400
 
-    EasyPrivacy:
-      type: http
-      behavior: domain
-      url: "https://raw.githubusercontent.com/earoftoast/clash-rules/main/EasyPrivacy.yaml"
-      path: ./rules/EasyPrivacy.yaml
-      interval: 86400
+  EasyPrivacy:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/earoftoast/clash-rules/main/EasyPrivacy.yaml"
+    path: ./rules/EasyPrivacy.yaml
+    interval: 86400
 
-    ProgramAD:
-      type: http
-      behavior: domain
-      url: "https://raw.githubusercontent.com/earoftoast/clash-rules/main/ProgramAD.yaml"
-      path: ./rules/ProgramAD.yaml
-      interval: 86400
+  ProgramAD:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/earoftoast/clash-rules/main/ProgramAD.yaml"
+    path: ./rules/ProgramAD.yaml
+    interval: 86400
 
+  reject:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
+    path: ./ruleset/reject.yaml
+    interval: 86400
 
 rules:
     - AND,((DST-PORT,443),(NETWORK,UDP)),REJECT
@@ -375,6 +381,7 @@ rules:
     - RULE-SET,EasyListChina,REJECT
     - RULE-SET,EasyPrivacy,REJECT
     - RULE-SET,ProgramAD,REJECT
+    - RULE-SET,reject,REJECT
 
     - RULE-SET,Apple-Site,Apple
     - RULE-SET,Apple-IP,Apple
