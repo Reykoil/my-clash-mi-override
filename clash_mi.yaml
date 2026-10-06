@@ -33,7 +33,7 @@ proxy-groups:
   - name: Bahamut
     type: select
     proxies:
-      - HK_TW
+      - HK_TW_FB
       - Final
       - HK
       - TW
@@ -41,7 +41,7 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Bahamut.png
 
   - name: Google
-    type: select
+    <<: *Anchor_FB
     proxies:
       - NO_HK
       - Final
@@ -50,6 +50,13 @@ proxy-groups:
   - name: Final
     <<: *Anchor_ALL
     icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Final.png
+
+  - name: HK_TW_FB
+    <<: *Anchor_FB
+    proxies:
+      - HK_TW
+      - Final
+    icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Food-Delivery/Food_Pack.png
 
   - name: ALL
     <<: *Anchor_UT
